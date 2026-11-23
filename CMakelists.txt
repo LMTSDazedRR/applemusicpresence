@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.20)
+project(AppleMusicRPC CXX)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+add_executable(AppleMusicRPC WIN32 main.cpp)   # WIN32 = no console window
+target_compile_definitions(AppleMusicRPC PRIVATE UNICODE _UNICODE WIN32_LEAN_AND_MEAN)
+target_link_libraries(AppleMusicRPC PRIVATE windowsapp shell32 advapi32)
